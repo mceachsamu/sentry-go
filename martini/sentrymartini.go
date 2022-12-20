@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/getsentry/sentry-go"
 	"github.com/go-martini/martini"
-	"github.com/mceachsamu/sentry-go"
 )
 
 type handler struct {

@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/getsentry/sentry-go"
 	"github.com/kataras/iris/v12"
-	"github.com/mceachsamu/sentry-go"
 )
 
 const valuesKey = "sentry"

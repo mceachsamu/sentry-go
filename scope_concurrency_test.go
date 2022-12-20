@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/mceachsamu/sentry-go"
+	"github.com/getsentry/sentry-go"
 )
 
 func TestConcurrentScopeUsage(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	sentry "github.com/mceachsamu/sentry-go"
+	sentry "github.com/getsentry/sentry-go"
 	"github.com/sirupsen/logrus"
 )
 

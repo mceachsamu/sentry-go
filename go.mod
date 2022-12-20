@@ -1,4 +1,4 @@
-module github.com/mceachsamu/sentry-go
+module github.com/getsentry/sentry-go
 
 go 1.19
 

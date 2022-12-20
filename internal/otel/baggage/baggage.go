@@ -24,7 +24,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/mceachsamu/sentry-go/internal/otel/baggage/internal/baggage"
+	"github.com/getsentry/sentry-go/internal/otel/baggage/internal/baggage"
 )
 
 const (

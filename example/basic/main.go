@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mceachsamu/sentry-go"
+	"github.com/getsentry/sentry-go"
 )
 
 // release is the release of this program that will be reported to Sentry.

@@ -187,7 +187,7 @@ func TestContextifyFrames(t *testing.T) {
 
 	frames := cfi.contextify([]Frame{{
 		Function: "Trace",
-		Module:   "github.com/mceachsamu/sentry-go",
+		Module:   "github.com/getsentry/sentry-go",
 		Filename: filename,
 		AbsPath:  abspath,
 		Lineno:   12,
@@ -271,7 +271,7 @@ func TestExtractModules(t *testing.T) {
 				},
 				Deps: []*debug.Module{
 					{
-						Path:    "github.com/mceachsamu/sentry-go",
+						Path:    "github.com/getsentry/sentry-go",
 						Version: "v0.5.1",
 					},
 					{
@@ -281,9 +281,9 @@ func TestExtractModules(t *testing.T) {
 				},
 			},
 			want: map[string]string{
-				"my/module":                       "(devel)",
-				"github.com/mceachsamu/sentry-go": "v0.5.1",
-				"github.com/gin-gonic/gin":        "v1.4.0",
+				"my/module":                      "(devel)",
+				"github.com/getsentry/sentry-go": "v0.5.1",
+				"github.com/gin-gonic/gin":       "v1.4.0",
 			},
 		},
 		{
@@ -295,7 +295,7 @@ func TestExtractModules(t *testing.T) {
 				},
 				Deps: []*debug.Module{
 					{
-						Path:    "github.com/mceachsamu/sentry-go",
+						Path:    "github.com/getsentry/sentry-go",
 						Version: "v0.5.1",
 						Replace: &debug.Module{
 							Path: "pkg/sentry",
@@ -304,8 +304,8 @@ func TestExtractModules(t *testing.T) {
 				},
 			},
 			want: map[string]string{
-				"my/module":                       "(devel)",
-				"github.com/mceachsamu/sentry-go": "v0.5.1 => pkg/sentry",
+				"my/module":                      "(devel)",
+				"github.com/getsentry/sentry-go": "v0.5.1 => pkg/sentry",
 			},
 		},
 		{

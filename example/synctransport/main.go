@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/mceachsamu/sentry-go"
+	"github.com/getsentry/sentry-go"
 )
 
 func main() {
