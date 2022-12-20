@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/getsentry/sentry-go"
-	sentryiris "github.com/getsentry/sentry-go/iris"
 	"github.com/kataras/iris/v12"
+	"github.com/mceachsamu/sentry-go"
+	sentryiris "github.com/mceachsamu/sentry-go/iris"
 )
 
 func main() {

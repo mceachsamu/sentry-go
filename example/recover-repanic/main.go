@@ -5,7 +5,7 @@
 //
 // Try it by running:
 //
-//  go run main.go
+//	go run main.go
 //
 // To actually report events to Sentry, set the DSN either by editing the
 // appropriate line below or setting the environment variable SENTRY_DSN to
@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/mceachsamu/sentry-go"
 )
 
 func main() {

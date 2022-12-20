@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/mceachsamu/sentry-go"
 )
 
 // TransportWithHooks is an http.RoundTripper that wraps an existing

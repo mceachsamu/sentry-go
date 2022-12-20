@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/mceachsamu/sentry-go"
 )
 
 func prettyPrint(v interface{}) string {

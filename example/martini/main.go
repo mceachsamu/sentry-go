@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
-	sentrymartini "github.com/getsentry/sentry-go/martini"
+	sentrymartini "github.com/mceachsamu/sentry-go/martini"
 
-	"github.com/getsentry/sentry-go"
 	"github.com/go-martini/martini"
+	"github.com/mceachsamu/sentry-go"
 )
 
 func main() {

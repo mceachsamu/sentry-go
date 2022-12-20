@@ -16,7 +16,7 @@ Due to ongoing work towards a stable API for `v1.0.0`, we sadly had to include *
           TracesSampleRate: 1.0,
       })
       ```
-- Unify TracesSampler [#498](https://github.com/getsentry/sentry-go/pull/498)
+- Unify TracesSampler [#498](https://github.com/mceachsamu/sentry-go/pull/498)
     - `TracesSampler` was changed to a callback that must return a `float64` between `0.0` and `1.0`.
        
        For example, you can apply a sample rate of `1.0` (100%) to all `/api` transactions, and a sample rate of `0.5` (50%) to all other transactions.
@@ -40,16 +40,16 @@ Due to ongoing work towards a stable API for `v1.0.0`, we sadly had to include *
 ### Features
 
 - Send errors logged with [Logrus](https://github.com/sirupsen/logrus) to Sentry.
-    - Have a look at our [logrus examples](https://github.com/getsentry/sentry-go/blob/master/example/logrus/main.go) on how to use the integration.
-- Add support for Dynamic Sampling [#491](https://github.com/getsentry/sentry-go/pull/491)
+    - Have a look at our [logrus examples](https://github.com/mceachsamu/sentry-go/blob/master/example/logrus/main.go) on how to use the integration.
+- Add support for Dynamic Sampling [#491](https://github.com/mceachsamu/sentry-go/pull/491)
     - You can read more about Dynamic Sampling in our [product docs](https://docs.sentry.io/product/data-management-settings/dynamic-sampling/).
 - Add detailed logging about the reason transactions are being dropped.
     - You can enable SDK logging via `sentry.ClientOptions.Debug: true`.
 
 ### Bug Fixes
 
-- Do not clone the hub when calling `StartTransaction` [#505](https://github.com/getsentry/sentry-go/pull/505)
-    - Fixes [#502](https://github.com/getsentry/sentry-go/issues/502)
+- Do not clone the hub when calling `StartTransaction` [#505](https://github.com/mceachsamu/sentry-go/pull/505)
+    - Fixes [#502](https://github.com/mceachsamu/sentry-go/issues/502)
 
 ## 0.15.0
 
@@ -91,16 +91,16 @@ _NOTE:_ This version drops support for Go 1.16 and Go 1.15. The currently suppor
 _NOTE:_
 This version drops support for Go 1.14, however no changes have been made that would make the SDK not work with Go 1.14. The currently supported Go versions are the last 3 stable releases: 1.15, 1.16 and 1.17.
 There are two behavior changes related to `LastEventID`, both of which were intended to align the behavior of the Sentry Go SDK with other Sentry SDKs.
-The new [automatic release detection feature](https://github.com/getsentry/sentry-go/issues/335) makes it easier to use Sentry and separate events per release without requiring extra work from users. We intend to improve this functionality in a future release by utilizing information that will be available in runtime starting with Go 1.18. The tracking issue is [#401](https://github.com/getsentry/sentry-go/issues/401).
+The new [automatic release detection feature](https://github.com/mceachsamu/sentry-go/issues/335) makes it easier to use Sentry and separate events per release without requiring extra work from users. We intend to improve this functionality in a future release by utilizing information that will be available in runtime starting with Go 1.18. The tracking issue is [#401](https://github.com/mceachsamu/sentry-go/issues/401).
 
 ## v0.11.0
 
-- feat(transports): Category-based Rate Limiting ([#354](https://github.com/getsentry/sentry-go/pull/354))
-- feat(transports): Report User-Agent identifying SDK ([#357](https://github.com/getsentry/sentry-go/pull/357))
-- fix(scope): Include event processors in clone ([#349](https://github.com/getsentry/sentry-go/pull/349))
-- Improvements to `go doc` documentation ([#344](https://github.com/getsentry/sentry-go/pull/344), [#350](https://github.com/getsentry/sentry-go/pull/350), [#351](https://github.com/getsentry/sentry-go/pull/351))
+- feat(transports): Category-based Rate Limiting ([#354](https://github.com/mceachsamu/sentry-go/pull/354))
+- feat(transports): Report User-Agent identifying SDK ([#357](https://github.com/mceachsamu/sentry-go/pull/357))
+- fix(scope): Include event processors in clone ([#349](https://github.com/mceachsamu/sentry-go/pull/349))
+- Improvements to `go doc` documentation ([#344](https://github.com/mceachsamu/sentry-go/pull/344), [#350](https://github.com/mceachsamu/sentry-go/pull/350), [#351](https://github.com/mceachsamu/sentry-go/pull/351))
 - Miscellaneous changes to our testing infrastructure with GitHub Actions
-  ([57123a40](https://github.com/getsentry/sentry-go/commit/57123a409be55f61b1d5a6da93c176c55a399ad0), [#128](https://github.com/getsentry/sentry-go/pull/128), [#338](https://github.com/getsentry/sentry-go/pull/338), [#345](https://github.com/getsentry/sentry-go/pull/345), [#346](https://github.com/getsentry/sentry-go/pull/346), [#352](https://github.com/getsentry/sentry-go/pull/352), [#353](https://github.com/getsentry/sentry-go/pull/353), [#355](https://github.com/getsentry/sentry-go/pull/355))
+  ([57123a40](https://github.com/mceachsamu/sentry-go/commit/57123a409be55f61b1d5a6da93c176c55a399ad0), [#128](https://github.com/mceachsamu/sentry-go/pull/128), [#338](https://github.com/mceachsamu/sentry-go/pull/338), [#345](https://github.com/mceachsamu/sentry-go/pull/345), [#346](https://github.com/mceachsamu/sentry-go/pull/346), [#352](https://github.com/mceachsamu/sentry-go/pull/352), [#353](https://github.com/mceachsamu/sentry-go/pull/353), [#355](https://github.com/mceachsamu/sentry-go/pull/355))
 
 _NOTE:_
 This version drops support for Go 1.13. The currently supported Go versions are the last 3 stable releases: 1.14, 1.15 and 1.16.
@@ -128,7 +128,7 @@ There are no breaking changes and upgrading should be a smooth experience for al
 _NOTE:_
 This version introduces support for [Sentry's Performance Monitoring](https://docs.sentry.io/platforms/go/performance/).
 The new tracing capabilities are beta, and we plan to expand them on future versions. Feedback is welcome, please open new issues on GitHub.
-The `sentryhttp` package got better API docs, an [updated usage example](https://github.com/getsentry/sentry-go/tree/master/example/http) and support for creating automatic transactions as part of Performance Monitoring.
+The `sentryhttp` package got better API docs, an [updated usage example](https://github.com/mceachsamu/sentry-go/tree/master/example/http) and support for creating automatic transactions as part of Performance Monitoring.
 
 ## v0.8.0
 
@@ -220,8 +220,8 @@ allocated.
   import (
   	"fmt"
 
-  	"github.com/getsentry/sentry-go"
-  	sentryfasthttp "github.com/getsentry/sentry-go/fasthttp"
+  	"github.com/mceachsamu/sentry-go"
+  	sentryfasthttp "github.com/mceachsamu/sentry-go/fasthttp"
   	"github.com/valyala/fasthttp"
   )
   ```

@@ -16,7 +16,7 @@ import (
 	pkgerr "github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/getsentry/sentry-go"
+	"github.com/mceachsamu/sentry-go"
 )
 
 const testDSN = "http://test:test@localhost/1234"
